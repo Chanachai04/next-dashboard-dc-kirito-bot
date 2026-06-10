@@ -122,7 +122,7 @@ export function Dashboard() {
   };
 
   return (
-    <div className="container py-8 mx-auto max-w-[1600px]">
+    <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 overflow-hidden">
       {/* Top Header */}
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
         <div className="flex items-center gap-3">
@@ -167,50 +167,50 @@ export function Dashboard() {
       )}
 
       {/* Summary Cards Row */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
-        <Card className="p-6 border-0 bg-white dark:bg-slate-900 ring-1 ring-slate-100/50 dark:ring-slate-800 cursor-pointer hover:shadow-md transition-shadow">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-8">
+        <Card className="p-4 sm:p-6 border-0 bg-white dark:bg-slate-900 ring-1 ring-slate-100/50 dark:ring-slate-800 cursor-pointer hover:shadow-md transition-shadow">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mb-1">{t("totalTasks")}</p>
-              <h2 className="text-3xl font-bold text-slate-800 dark:text-white">{totalTasks}</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white">{totalTasks}</h2>
             </div>
-            <div className="p-3 bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-full">
+            <div className="hidden sm:flex p-2 sm:p-3 bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-full">
               <ListTodo className="w-6 h-6" />
             </div>
           </div>
         </Card>
         
-        <Card className="p-6 border-0 bg-white dark:bg-slate-900 ring-1 ring-slate-100/50 dark:ring-slate-800 cursor-pointer hover:shadow-md transition-shadow">
+        <Card className="p-4 sm:p-6 border-0 bg-white dark:bg-slate-900 ring-1 ring-slate-100/50 dark:ring-slate-800 cursor-pointer hover:shadow-md transition-shadow">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mb-1">{t("completedTasks")}</p>
-              <h2 className="text-3xl font-bold text-slate-800 dark:text-white">{completedTasks}</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white">{completedTasks}</h2>
             </div>
-            <div className="p-3 bg-green-50 dark:bg-green-500/10 text-green-600 dark:text-green-400 rounded-full">
+            <div className="hidden sm:flex p-2 sm:p-3 bg-green-50 dark:bg-green-500/10 text-green-600 dark:text-green-400 rounded-full">
               <CheckCircle2 className="w-6 h-6" />
             </div>
           </div>
         </Card>
 
-        <Card className="p-6 border-0 bg-white dark:bg-slate-900 ring-1 ring-slate-100/50 dark:ring-slate-800 cursor-pointer hover:shadow-md transition-shadow">
+        <Card className="p-4 sm:p-6 border-0 bg-white dark:bg-slate-900 ring-1 ring-slate-100/50 dark:ring-slate-800 cursor-pointer hover:shadow-md transition-shadow">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mb-1">{t("pendingTasks")}</p>
-              <h2 className="text-3xl font-bold text-slate-800 dark:text-white">{pendingTasks}</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white">{pendingTasks}</h2>
             </div>
-            <div className="p-3 bg-orange-50 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400 rounded-full">
+            <div className="hidden sm:flex p-2 sm:p-3 bg-orange-50 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400 rounded-full">
               <Clock className="w-6 h-6" />
             </div>
           </div>
         </Card>
 
-        <Card className="p-6 border-0 bg-white dark:bg-slate-900 ring-1 ring-slate-100/50 dark:ring-slate-800 cursor-pointer hover:shadow-md transition-shadow">
+        <Card className="p-4 sm:p-6 border-0 bg-white dark:bg-slate-900 ring-1 ring-slate-100/50 dark:ring-slate-800 cursor-pointer hover:shadow-md transition-shadow">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mb-1">{t("successRate")}</p>
-              <h2 className="text-3xl font-bold text-slate-800 dark:text-white">{completionRate}%</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white">{completionRate}%</h2>
             </div>
-            <div className="p-3 bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400 rounded-full">
+            <div className="hidden sm:flex p-2 sm:p-3 bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400 rounded-full">
               <Percent className="w-6 h-6" />
             </div>
           </div>

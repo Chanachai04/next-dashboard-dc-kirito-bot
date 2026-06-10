@@ -27,7 +27,7 @@ export default function RootLayout({
       className={`${prompt.variable} font-sans h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col transition-colors">
+      <body className="min-h-full flex flex-col transition-colors overflow-x-hidden">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

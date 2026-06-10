@@ -191,8 +191,24 @@ export function TasksTable({ tasks }: TasksTableProps) {
 
                 return (
                   <TableRow key={index} className={rowClassName}>
-                    <TableCell className="font-medium text-slate-900 dark:text-slate-100">{task.discord_name}</TableCell>
-                    <TableCell className="text-slate-700 dark:text-slate-300">{task.task}</TableCell>
+                    <TableCell className="font-medium text-slate-900 dark:text-slate-100 max-w-[120px] sm:max-w-[180px] md:max-w-[250px]">
+                      <div className="relative group cursor-pointer">
+                        <div className="truncate w-full">{task.discord_name}</div>
+                        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block w-max max-w-[200px] sm:max-w-[300px] px-3 py-2 bg-slate-800 dark:bg-slate-100 text-white dark:text-slate-900 text-xs font-medium rounded shadow-xl z-[60] whitespace-normal text-center break-words">
+                          {task.discord_name}
+                          <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-slate-800 dark:border-t-slate-100"></div>
+                        </div>
+                      </div>
+                    </TableCell>
+                    <TableCell className="text-slate-700 dark:text-slate-300 max-w-[150px] sm:max-w-[250px] md:max-w-[350px]">
+                      <div className="relative group cursor-pointer">
+                        <div className="truncate w-full">{task.task}</div>
+                        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block w-max max-w-[250px] sm:max-w-md px-3 py-2 bg-slate-800 dark:bg-slate-100 text-white dark:text-slate-900 text-xs font-medium rounded shadow-xl z-[60] whitespace-normal text-left break-words">
+                          {task.task}
+                          <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-slate-800 dark:border-t-slate-100"></div>
+                        </div>
+                      </div>
+                    </TableCell>
                     <TableCell className="text-slate-600 dark:text-slate-400">
                       <div className="flex items-center gap-2">
                         {task.deadline}
