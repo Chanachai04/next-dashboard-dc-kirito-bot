@@ -21,8 +21,9 @@ export async function getGoogleSheets() {
     });
   }
 
-  const client = await auth.getClient();
-  const sheets = google.sheets({ version: "v4", auth: client });
+  // We don't need to await auth.getClient() in newer versions, 
+  // we can pass the GoogleAuth instance directly.
+  const sheets = google.sheets({ version: "v4", auth });
 
   return sheets;
 }

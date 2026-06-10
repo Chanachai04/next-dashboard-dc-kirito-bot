@@ -57,7 +57,7 @@ export function TasksOverviewChart({ tasks }: TasksOverviewChartProps) {
         [t("totalTasks")]: stats.total,
         [t("completedTasks")]: stats.completed,
       }))
-      .sort((a, b) => b[t("totalTasks")] - a[t("totalTasks")]);
+      .sort((a, b) => (b[t("totalTasks")] as number) - (a[t("totalTasks")] as number));
 
     return {
       barChartData: barData,
